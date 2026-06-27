@@ -1,0 +1,36 @@
+# LaTeX artifacts
+*.aux
+*.out
+*.log
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Backup files
+*.bak
+*.bak_*
+*.bak_old
+*.bak_old2
+*.bak_old3
+*.bak_ga
+*.bak_ga2
+*.bak_prefinal
+*.bak_uncited
+*.bak_polluted
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files (download separately via scripts/download_tcga.py)
+data/*.tsv
+data/*.gz
+
+# Old replication package backups
+replication_package.zip.bak*
