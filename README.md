@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Discovery-Phase_Transition-2E86AB?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Validation-5_Modalities-27AE60?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Scale-33_Cancers_+_1,190_Cell_Lines-8E44AD?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Discovery-Phase_Transition-2C3E50?style=flat-square" />
+  <img src="https://img.shields.io/badge/Validation-6_Modalities-34495E?style=flat-square" />
+  <img src="https://img.shields.io/badge/Scale-33_Cancers_+_1,190_Cell_Lines-5D6D7E?style=flat-square" />
 </p>
 
 # A Sample-Size Phase Transition Ends the Hard-versus-Soft Clustering Debate
@@ -10,11 +10,11 @@
 Chongqing Institute of Foreign Studies · Qijiang Campus, Chongqing 401420, China  
 📧 gsd3247186514@gmail.com · 🔗 [ORCID: 0009-0004-5641-3581](https://orcid.org/0009-0004-5641-3581)
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C)](https://pytorch.org/)
-[![CUDA](https://img.shields.io/badge/CUDA-Optional-76B900)](https://developer.nvidia.com/cuda-toolkit)
-[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
-[![Patent](https://img.shields.io/badge/Patent-Pending-orange)]()
+[![Python](https://img.shields.io/badge/Python-3.10%2B-2C3E50?style=flat-square)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-5D6D7E?style=flat-square)](https://pytorch.org/)
+[![CUDA](https://img.shields.io/badge/CUDA-Optional-7F8C8D?style=flat-square)](https://developer.nvidia.com/cuda-toolkit)
+[![License](https://img.shields.io/badge/License-MIT-34495E?style=flat-square)](./LICENSE)
+[![Patent](https://img.shields.io/badge/Patent-Pending-95A5A6?style=flat-square)]()
 
 ---
 
