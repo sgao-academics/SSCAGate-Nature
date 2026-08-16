@@ -9,8 +9,8 @@ Output: figures/ed/ed_fig1_ksweep_v2.{pdf,png}
 """
 import json, os, numpy as np
 
-DATA_DIR = r'D:\NO.1\Replication_Package\results'
-OUT_ED   = r'C:\Users\高帅东\Desktop\SSCAGate-Nature\figures\ed'
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results')
+OUT_ED   = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'figures', 'ed')
 os.makedirs(OUT_ED, exist_ok=True)
 
 import matplotlib

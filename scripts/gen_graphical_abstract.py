@@ -3,12 +3,6 @@
 _gen_graphical_abstract_v3.py
 Nature graphical abstract — final version.
 
-Credits:
-  - Phase diagram concept: 弈衡 (DeepSeek)
-  - Real TCGA data integration: 千策
-  - Cross-modal universality strip: 弈衡
-  - Color palette & layout: jointly refined
-
 Design principles:
   1. Left (3/5): scaling law phase diagram — formula on the curve
   2. Right (2/5): 33 real TCGA cancers — the data that proves the law
@@ -42,7 +36,7 @@ C_TCGA_M = '#D68910'   # medium n
 C_TCGA_L = '#2471A3'   # large n
 
 # ── Load real data ──────────────────────────────────────────
-with open(r'D:\NO.1\Replication_Package\results\mega_33_full.json','r',encoding='utf-8') as f:
+with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results', 'mega_33_full.json'),'r',encoding='utf-8') as f:
     mega = json.load(f)
 
 pts = []

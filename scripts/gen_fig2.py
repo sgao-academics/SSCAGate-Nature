@@ -15,13 +15,13 @@ Output: figures/main/Fig2_Universal_Scaling.{pdf,png}
 import json, os, sys
 import numpy as np
 
-sys.path.insert(0, r'D:\NO.1')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from nature_style import (
     apply_nature_style, N_BLUE, N_ORANGE, N_GREEN, N_RED,
     N_PURPLE, N_TEAL, N_GRAY, N_DARK, N_WHITE, FIG_W_FULL, DPI
 )
 
-BASE_DIR = r'C:\Users\高帅东\Desktop\SSCAGate-Nature'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_MAIN = os.path.join(BASE_DIR, 'figures', 'main')
 os.makedirs(OUT_MAIN, exist_ok=True)
 
@@ -35,7 +35,7 @@ apply_nature_style()
 # ================================================================
 # DATA: Load empirical n/d points from mega_33
 # ================================================================
-DATA_DIR = r'D:\NO.1\cdsm_patent_upgrades\benchmark_results'
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results')
 with open(os.path.join(DATA_DIR, 'mega_33_full.json'), encoding='utf-8') as f:
     mega = json.load(f)
 

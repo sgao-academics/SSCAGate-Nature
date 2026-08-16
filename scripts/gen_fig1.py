@@ -16,7 +16,7 @@ from scipy.stats import spearmanr
 from PIL import Image
 
 # --- Path setup ---
-sys.path.insert(0, r'D:\NO.1')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from nature_style import (apply_nature_style, N_BLUE, N_ORANGE, N_GREEN, N_RED,
                           N_PURPLE, N_TEAL, N_GRAY, N_DARK, N_WHITE, FIG_W_FULL, DPI,
                           save_nature_figure)
@@ -35,8 +35,8 @@ MAIN_DIR = os.path.join(PKG, 'figures', 'main')
 os.makedirs(PANELS_DIR, exist_ok=True)
 os.makedirs(MAIN_DIR, exist_ok=True)
 
-DATA = r'D:\NO.1\cdsm_patent_upgrades\benchmark_results'
-REPL = r'D:\NO.1\Replication_Package\results'
+DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results')
+REPL = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results')
 
 print('=' * 60)
 print('gen_fig1.py — NATURE FIGURE 1 COMPOSITE')
