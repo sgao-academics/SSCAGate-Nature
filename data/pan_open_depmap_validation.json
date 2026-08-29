@@ -1,0 +1,174 @@
+{
+ "per_cancer": {
+  "BLCA": {
+   "n_only": 12,
+   "n_base": 15,
+   "n_rand": 11,
+   "mean_only": 0.051,
+   "mean_base": 0.0646,
+   "mean_rand": 0.0438
+  },
+  "BRCA": {
+   "n_only": 17,
+   "n_base": 6,
+   "n_rand": 19,
+   "mean_only": 0.0617,
+   "mean_base": 0.0826,
+   "mean_rand": 0.0451
+  },
+  "CESC": {
+   "n_only": 13,
+   "n_base": 8,
+   "n_rand": 14,
+   "mean_only": 0.0645,
+   "mean_base": 0.0819,
+   "mean_rand": 0.059
+  },
+  "COAD": {
+   "n_only": 6,
+   "n_base": 16,
+   "n_rand": 3,
+   "mean_only": 0.0606,
+   "mean_base": 0.0547,
+   "mean_rand": 0.0977
+  },
+  "ESCA": {
+   "n_only": 8,
+   "n_base": 20,
+   "n_rand": 11,
+   "mean_only": 0.0656,
+   "mean_base": 0.0507,
+   "mean_rand": 0.0831
+  },
+  "GBM": {
+   "n_only": 21,
+   "n_base": 9,
+   "n_rand": 14,
+   "mean_only": 0.0303,
+   "mean_base": 0.0723,
+   "mean_rand": 0.0592
+  },
+  "HNSC": {
+   "n_only": 16,
+   "n_base": 14,
+   "n_rand": 13,
+   "mean_only": 0.0422,
+   "mean_base": 0.0433,
+   "mean_rand": 0.0346
+  },
+  "KIRC": {
+   "n_only": 15,
+   "n_base": 20,
+   "n_rand": 13,
+   "mean_only": 0.0793,
+   "mean_base": 0.0572,
+   "mean_rand": 0.0676
+  },
+  "KIRP": {
+   "n_only": 8,
+   "n_base": 15,
+   "n_rand": 8,
+   "mean_only": 0.0524,
+   "mean_base": 0.0623,
+   "mean_rand": 0.0563
+  },
+  "LAML": {
+   "n_only": 7,
+   "n_base": 16,
+   "n_rand": 6,
+   "mean_only": 0.0694,
+   "mean_base": 0.0571,
+   "mean_rand": 0.05
+  },
+  "LGG": {
+   "n_only": 21,
+   "n_base": 15,
+   "n_rand": 17,
+   "mean_only": 0.0553,
+   "mean_base": 0.0516,
+   "mean_rand": 0.0739
+  },
+  "LIHC": {
+   "n_only": 13,
+   "n_base": 13,
+   "n_rand": 12,
+   "mean_only": 0.0643,
+   "mean_base": 0.0867,
+   "mean_rand": 0.0615
+  },
+  "LUAD": {
+   "n_only": 15,
+   "n_base": 10,
+   "n_rand": 12,
+   "mean_only": 0.0713,
+   "mean_base": 0.0826,
+   "mean_rand": 0.0882
+  },
+  "LUSC": {
+   "n_only": 12,
+   "n_base": 17,
+   "n_rand": 11,
+   "mean_only": 0.0692,
+   "mean_base": 0.0737,
+   "mean_rand": 0.0476
+  },
+  "OV": {
+   "n_only": 7,
+   "n_base": 5,
+   "n_rand": 8,
+   "mean_only": 0.0783,
+   "mean_base": 0.0295,
+   "mean_rand": 0.0591
+  },
+  "PAAD": {
+   "n_only": 19,
+   "n_base": 14,
+   "n_rand": 19,
+   "mean_only": 0.0399,
+   "mean_base": 0.0345,
+   "mean_rand": 0.0513
+  },
+  "PCPG": {
+   "n_only": 9,
+   "n_base": 12,
+   "n_rand": 6,
+   "mean_only": 0.0856,
+   "mean_base": 0.0524,
+   "mean_rand": 0.0756
+  },
+  "PRAD": {
+   "n_only": 8,
+   "n_base": 9,
+   "n_rand": 8,
+   "mean_only": 0.0515,
+   "mean_base": 0.0739,
+   "mean_rand": 0.0445
+  },
+  "SARC": {
+   "n_only": 22,
+   "n_base": 13,
+   "n_rand": 22,
+   "mean_only": 0.0567,
+   "mean_base": 0.0804,
+   "mean_rand": 0.065
+  },
+  "SKCM": {
+   "n_only": 6,
+   "n_base": 15,
+   "n_rand": 3,
+   "mean_only": 0.1033,
+   "mean_base": 0.08,
+   "mean_rand": 0.0613
+  }
+ },
+ "pooled": {
+  "mean_only": 0.0615,
+  "mean_base": 0.0616,
+  "mean_rand": 0.0585,
+  "n_only": 806,
+  "n_base": 763,
+  "n_rand": 722,
+  "p_only_vs_rand": 0.37761305908639603,
+  "p_only_vs_base": 0.6457467340703466
+ }
+}

@@ -1,0 +1,259 @@
+{
+ "per_cancer": {
+  "BLCA": {
+   "n_only": 13,
+   "hit_only": 0,
+   "n_base": 16,
+   "hit_base": 0,
+   "n_rand": 13,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "BRCA": {
+   "n_only": 23,
+   "hit_only": 0,
+   "n_base": 8,
+   "hit_base": 0,
+   "n_rand": 23,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "CESC": {
+   "n_only": 23,
+   "hit_only": 0,
+   "n_base": 11,
+   "hit_base": 0,
+   "n_rand": 23,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "COAD": {
+   "n_only": 6,
+   "hit_only": 0,
+   "n_base": 19,
+   "hit_base": 0,
+   "n_rand": 6,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "ESCA": {
+   "n_only": 15,
+   "hit_only": 0,
+   "n_base": 22,
+   "hit_base": 0,
+   "n_rand": 15,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "GBM": {
+   "n_only": 23,
+   "hit_only": 0,
+   "n_base": 16,
+   "hit_base": 0,
+   "n_rand": 23,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "HNSC": {
+   "n_only": 19,
+   "hit_only": 0,
+   "n_base": 20,
+   "hit_base": 0,
+   "n_rand": 19,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "KIRC": {
+   "n_only": 17,
+   "hit_only": 0,
+   "n_base": 21,
+   "hit_base": 0,
+   "n_rand": 17,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "KIRP": {
+   "n_only": 8,
+   "hit_only": 0,
+   "n_base": 17,
+   "hit_base": 0,
+   "n_rand": 8,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "LAML": {
+   "n_only": 11,
+   "hit_only": 0,
+   "n_base": 23,
+   "hit_base": 0,
+   "n_rand": 11,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "LGG": {
+   "n_only": 23,
+   "hit_only": 0,
+   "n_base": 21,
+   "hit_base": 0,
+   "n_rand": 23,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "LIHC": {
+   "n_only": 17,
+   "hit_only": 0,
+   "n_base": 17,
+   "hit_base": 0,
+   "n_rand": 17,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "LUAD": {
+   "n_only": 21,
+   "hit_only": 0,
+   "n_base": 15,
+   "hit_base": 0,
+   "n_rand": 21,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "LUSC": {
+   "n_only": 20,
+   "hit_only": 0,
+   "n_base": 25,
+   "hit_base": 0,
+   "n_rand": 20,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "OV": {
+   "n_only": 12,
+   "hit_only": 0,
+   "n_base": 7,
+   "hit_base": 0,
+   "n_rand": 12,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "PAAD": {
+   "n_only": 25,
+   "hit_only": 0,
+   "n_base": 18,
+   "hit_base": 0,
+   "n_rand": 25,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "PCPG": {
+   "n_only": 9,
+   "hit_only": 0,
+   "n_base": 15,
+   "hit_base": 0,
+   "n_rand": 9,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "PRAD": {
+   "n_only": 11,
+   "hit_only": 0,
+   "n_base": 11,
+   "hit_base": 0,
+   "n_rand": 11,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "SARC": {
+   "n_only": 24,
+   "hit_only": 0,
+   "n_base": 14,
+   "hit_base": 0,
+   "n_rand": 24,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "SKCM": {
+   "n_only": 8,
+   "hit_only": 0,
+   "n_base": 17,
+   "hit_base": 0,
+   "n_rand": 8,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "STAD": {
+   "n_only": 19,
+   "hit_only": 0,
+   "n_base": 16,
+   "hit_base": 0,
+   "n_rand": 19,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  },
+  "TGCT": {
+   "n_only": 3,
+   "hit_only": 0,
+   "n_base": 22,
+   "hit_base": 0,
+   "n_rand": 3,
+   "hit_rand": 0,
+   "frac_only": 0.0,
+   "frac_base": 0.0,
+   "frac_rand": 0.0
+  }
+ },
+ "pooled": {
+  "frac_only": 0.0,
+  "frac_base": 0.0,
+  "frac_rand": 0.0,
+  "n_only": 1080,
+  "hit_only": 0,
+  "n_base": 1043,
+  "hit_base": 0,
+  "n_rand": 1080,
+  "hit_rand": 0,
+  "p_only_vs_rand": 1.0,
+  "p_only_vs_base": 1.0
+ }
+}

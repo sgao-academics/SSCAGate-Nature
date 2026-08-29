@@ -1,0 +1,131 @@
+% Fig1_Overview.tikz
+% Conceptual framework: Cluster decomposition for heterogeneous causal discovery.
+% Five panels, two rows (a-c top, d-e bottom). Palette matches _fig_style.py.
+% Redesigned 2026-08-28: column-fit width (~14cm), non-overlapping DAG nodes.
+% This is an \input child file: do NOT wrap in tikzpicture here.
+% Parent document must set:
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc,shapes,decorations.pathreplacing}
+%   \begin{tikzpicture} ... \input{../figures/Fig1_Overview.tikz} ... \end{tikzpicture}
+
+\definecolor{CBLUE}{RGB}{46,122,176}    % baseline / global
+\definecolor{CGREEN}{RGB}{32,166,93}    % per-cluster / remedy
+\definecolor{CORANGE}{RGB}{224,138,46}  % oracle / private edge
+\definecolor{CRED}{RGB}{201,74,61}      % gating / pitfall
+\definecolor{CGREY}{RGB}{110,110,120}   % reference
+\definecolor{CGREYL}{RGB}{178,184,192}  % light / dropped
+\definecolor{CINK}{RGB}{26,27,30}       % text
+\definecolor{CBG}{RGB}{243,246,249}     % soft panel background
+
+\tikzset{
+  cnode/.style={circle, draw=CINK, line width=0.5pt, fill=white, inner sep=1.0pt,
+                minimum size=4.5mm, font=\fontsize{7}{8.5}\selectfont},
+  edge/.style={-{Stealth[length=2.3mm,width=1.4mm]}, draw=CGREY, line width=0.55pt},
+  privrec/.style={-{Stealth[length=2.3mm,width=1.4mm]}, draw=CGREEN, line width=0.9pt},
+  privdro/.style={-{Stealth[length=2.3mm,width=1.4mm]}, draw=CGREYL, line width=0.9pt, dashed},
+  privact/.style={-{Stealth[length=2.3mm,width=1.4mm]}, draw=CORANGE, line width=0.9pt},
+  popbox/.style={draw=CGREY, line width=0.6pt, fill=CBG, rounded corners=1.2mm},
+  clusblue/.style={draw=CBLUE, line width=0.6pt, dashed},
+  clusgreen/.style={draw=CGREEN, line width=0.6pt, dashed},
+  ptitle/.style={font=\fontsize{9}{11}\selectfont\sffamily\bfseries, text=CINK, align=center},
+  plabel/.style={font=\fontsize{11}{12}\selectfont\bfseries, text=CINK, anchor=base west},
+  ann/.style={font=\fontsize{7.5}{9.5}\selectfont, text=CINK, align=center},
+  dotB/.style={circle, fill=CBLUE, minimum size=1.9pt, inner sep=0pt, outer sep=0pt},
+  dotG/.style={circle, fill=CGREEN, minimum size=1.9pt, inner sep=0pt, outer sep=0pt},
+}
+
+% =================== ROW 1 ===================
+% Panel a: heterogeneous population -------------------------------
+\node[plabel] at (0.15, 6.15) {a};
+\node[ptitle] at (2.65, 6.15) {Heterogeneous population};
+% subpop 1
+\draw[popbox] (0.15,3.95) rectangle (1.75,5.40);
+\node[cnode] (a1A) at (0.40,4.68) {A};
+\node[cnode] (a1B) at (0.95,4.68) {B};
+\node[cnode] (a1C) at (1.50,4.68) {C};
+\draw[edge] (a1A)--(a1B); \draw[edge] (a1B)--(a1C);
+% subpop 2
+\draw[popbox] (1.85,3.95) rectangle (3.45,5.40);
+\node[cnode] (a2A) at (2.10,4.68) {A};
+\node[cnode] (a2B) at (2.65,4.68) {B};
+\node[cnode] (a2C) at (3.20,4.68) {C};
+\draw[edge] (a2A)--(a2B); \draw[edge] (a2B)--(a2C);
+% subpop 3
+\draw[popbox] (3.55,3.95) rectangle (5.15,5.40);
+\node[cnode] (a3A) at (3.80,4.68) {A};
+\node[cnode] (a3B) at (4.35,4.68) {B};
+\node[cnode] (a3C) at (4.90,4.68) {C};
+\draw[edge] (a3A)--(a3B); \draw[edge] (a3B)--(a3C);
+\draw[privact] (a3A) to[out=60,in=120] (a3C);
+\node[ann, text=CORANGE] at (4.35, 5.66) {private edge};
+\node[ann] at (2.65, 3.42) {$K$ subpopulations,\\each its own DAG};
+
+% Panel b: single GLOBAL fit -------------------------------------
+\node[plabel] at (6.30, 6.15) {b};
+\node[ptitle] at (8.15, 6.15) {Single GLOBAL fit};
+\draw[popbox] (6.60,3.86) rectangle (9.70,4.42);
+\node[ann] at (8.15, 4.14) {pooled samples\\(avg of $K$ subgroups)};
+\node[cnode] (bA) at (7.60,3.02) {A};
+\node[cnode] (bB) at (8.15,3.02) {B};
+\node[cnode] (bC) at (8.70,3.02) {C};
+\draw[edge] (bA)--(bB); \draw[edge] (bB)--(bC);
+\draw[privdro] (bA) to[out=215,in=145] (bC);
+\node[ann, text=CRED] at (8.15, 2.26) {private edge diluted by $1/K$\\below threshold $\rightarrow$ dropped};
+
+% Panel c: cluster decomposition ---------------------------------
+\node[plabel] at (10.40, 6.15) {c};
+\node[ptitle] at (12.75, 6.15) {Cluster decomposition};
+\draw[clusblue]  (11.90,4.35) circle (0.72);
+\draw[clusgreen] (13.55,4.35) circle (0.72);
+% blue cluster dots
+\node[dotB] at (11.72,4.58) {}; \node[dotB] at (11.90,4.52) {}; \node[dotB] at (12.08,4.60) {};
+\node[dotB] at (11.66,4.34) {}; \node[dotB] at (11.86,4.30) {}; \node[dotB] at (12.02,4.26) {};
+\node[dotB] at (11.74,4.10) {}; \node[dotB] at (11.92,4.06) {}; \node[dotB] at (12.10,4.18) {};
+% green cluster dots
+\node[dotG] at (13.37,4.58) {}; \node[dotG] at (13.55,4.52) {}; \node[dotG] at (13.73,4.60) {};
+\node[dotG] at (13.31,4.34) {}; \node[dotG] at (13.51,4.30) {}; \node[dotG] at (13.67,4.26) {};
+\node[dotG] at (13.39,4.10) {}; \node[dotG] at (13.57,4.06) {}; \node[dotG] at (13.75,4.18) {};
+\node[ann] at (12.75, 3.30) {$K$-means partition\\into $K$ clusters};
+
+% =================== ROW 2 ===================
+% Panel d: partition-then-fit ------------------------------------
+\node[plabel] at (0.70, 1.60) {d};
+\node[ptitle] at (4.15, 1.60) {Partition-then-fit};
+% cluster 1
+\draw[popbox] (0.70,-0.10) rectangle (2.50,1.05);
+\node[cnode] (d1A) at (1.05,0.52) {A};
+\node[cnode] (d1B) at (1.60,0.52) {B};
+\node[cnode] (d1C) at (2.15,0.52) {C};
+\draw[edge] (d1A)--(d1B); \draw[edge] (d1B)--(d1C);
+\draw[privrec] (d1A) to[out=60,in=120] (d1C);
+% cluster 2
+\draw[popbox] (3.25,-0.10) rectangle (5.05,1.05);
+\node[cnode] (d2A) at (3.60,0.52) {A};
+\node[cnode] (d2B) at (4.15,0.52) {B};
+\node[cnode] (d2C) at (4.70,0.52) {C};
+\draw[edge] (d2A)--(d2B); \draw[edge] (d2B)--(d2C);
+\draw[privrec] (d2A) to[out=60,in=120] (d2C);
+% cluster 3
+\draw[popbox] (5.80,-0.10) rectangle (7.60,1.05);
+\node[cnode] (d3A) at (6.15,0.52) {A};
+\node[cnode] (d3B) at (6.70,0.52) {B};
+\node[cnode] (d3C) at (7.25,0.52) {C};
+\draw[edge] (d3A)--(d3B); \draw[edge] (d3B)--(d3C);
+\draw[privrec] (d3A) to[out=60,in=120] (d3C);
+\node[ann, text=CGREEN] at (4.15, -0.62) {fit within each, merge union\\private edges recovered};
+
+% Panel e: evaluation --------------------------------------------
+\node[plabel] at (9.20, 1.60) {e};
+\node[ptitle] at (11.10, 1.60) {Evaluation};
+% bars (base y=-0.40)
+\draw[fill=CBLUE,  draw=CGREY, line width=0.3pt] (9.33,-0.40) rectangle (9.88,0.10);
+\draw[fill=CGREEN, draw=CGREY, line width=0.3pt] (10.33,-0.40) rectangle (10.88,0.62);
+\draw[fill=CORANGE,draw=CGREY, line width=0.3pt] (11.33,-0.40) rectangle (11.88,0.66);
+\draw[fill=CRED,   draw=CGREY, line width=0.3pt] (12.33,-0.40) rectangle (12.88,0.14);
+\node[ann] at (9.60, -0.62) {global};
+\node[ann] at (10.60, -0.62) {per-cl.};
+\node[ann] at (11.60, -0.62) {oracle};
+\node[ann] at (12.60, -0.62) {gated};
+\node[ann, text=CGREEN] at (11.10, 1.24) {$F_1$: per-cluster $>$ global};
+\node[ann, text=CRED]   at (11.10, 0.90) {edge count: gated $>$ global};
+\node[ann] at (11.10, -1.02) {$F_1$ vs raw edge count};
