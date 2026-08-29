@@ -5,13 +5,14 @@ This package reproduces **all three main figures and the supplementary tables** 
 the manuscript from the bundled result files in `data/`. The two matplotlib figure
 scripts read their data from `data/` (path-patched; no hard-coded data-directory dependency) and
 write the figure to `figures/`. **Fig1 is the manuscript's schematic figure and is
-reproduced from its TikZ source** (`figures_src/Fig1_Overview.tikz`), which the
-manuscript `\input`s directly inside the LaTeX figure environment.
+reproduced from its TikZ source** via a self-contained standalone launcher
+(`figures_src/Fig1_Overview_standalone.tex`), so it compiles inside the package
+without needing the manuscript LaTeX file.
 
 ## Figure -> source -> data
 | Figure | Source | Data (data/) |
 |---|---|---|
-| Fig1_Overview | `figures_src/Fig1_Overview.tikz` (TikZ, compiled inside the manuscript) | (conceptual; reads no data) |
+| Fig1_Overview | `figures_src/Fig1_Overview_standalone.tex` + `Fig1_Overview.tikz` (TikZ; compile the standalone launcher) | (conceptual; reads no data) |
 | Fig2_ClusterDecomposition | scripts/fig_generators/gen_Fig2_ClusterDecomposition.py | overnight_checkpoint.json, overnight_checkpoint_cancers.json, cluster_method_comparison.json |
 | Fig3_EdgeCountPitfall | scripts/fig_generators/gen_Fig3_EdgeCountPitfall.py | synth_v2_d50.json, tcga_implant_BRCA_n200.json, spurious_phase_reproduction.json, e1_checkpoint.json |
 
@@ -42,19 +43,35 @@ anchors, DAGMA/GOLEM anchors, partitioner F1). Exit shows PASS/FAIL per check.
 | S4 | cluster_method_comparison.json |
 | S5, S6 | overnight_checkpoint_cancers.json |
 | S8 | e1_checkpoint.json |
-| S9 | nonlinear_edge_trap (re-run) |
-| S10 | kd_robustness (re-run) |
-| S11 | cagate_grid / cagate_real_value / PC-GES-DirectLiNGAM (re-run) |
+| S9 | nonlinear_edge_trap.json |
+| S10 | kd_robustness.json |
+| S11 | cagate_grid.json / cagate_real_value.json (plus PC-GES-DirectLiNGAM comparison) |
 | S12(a),(b) | d_scan_official.json (official solver) |
-| S13 | c_sensitivity (re-run) |
+| S13 | c_sensitivity_checkpoint.json |
+| S2 alt | e4_checkpoint.json / e10_hard_gating_trajectory.json / h_shd_grid_checkpoint.json / gate_feedback_trajectory.json (gate variants and robustness) |
+
+> All supplementary tables now read their results directly from the bundled files
+> in `data/` (pre-computed). No external TCGA download is required to reproduce the
+> figures or the supplementary tables.
 
 ## Re-run the experiments from scratch
 The experiment scripts in `scripts/experiments/` regenerate the result JSONs. They
 require (i) the paper's PyTorch NOTEARS core, (ii) TCGA expression data downloaded
-from UCSC Xena (`TCGA_<cancer>_HiSeqV2.tsv`, see the repo's `download_tcga.py`), and
+from UCSC Xena (`TCGA_<cancer>_HiSeqV2.tsv`, see `scripts/download_tcga.py`), and
 (iii) a GPU/CPU with the `requirements.txt` packages. Because the raw TCGA data is
-large (~1 GB) and external, the **pre-computed results are bundled here** so the
-figures and tables reproduce without re-running the (hours-long) experiments.
+large (~1 GB) and external, the **pre-computed results are bundled in `data/`** so the
+figures and tables reproduce without re-running the (hours-long) experiments. To
+re-run a specific experiment, install `pip install -r requirements.txt`, download the
+TCGA files with `scripts/download_tcga.py`, and run the corresponding script in
+`scripts/experiments/`; it will write its checkpoint JSON into `data/`.
+
+## Reproduce Fig. 1 (the manuscript schematic)
+```bash
+cd figures_src
+pdflatex Fig1_Overview_standalone.tex   # run twice
+```
+Output: `figures_src/Fig1_Overview_standalone.pdf`. Requires a TeX distribution
+(TeXLive or MiKTeX) with the standard TikZ/PGF libraries.
 
 ## Determinism
 All synthetic `make_dag(seed=42)` calls and all NOTEARS/K-means runs use fixed seeds;

@@ -1,0 +1,19 @@
+% Standalone launcher for the manuscript's Fig. 1 (cluster-decomposition schematic).
+% Compile with:  pdflatex Fig1_Overview_standalone.tex   (run twice)
+% Requires: pdflatex with the standard tikz + PGF libraries (TeXLive, MiKTeX).
+% Output: figures_src/Fig1_Overview_standalone.pdf
+%
+% This replicates the manuscript Fig. 1 from its TikZ source without needing the
+% manuscript LaTeX file. The manuscript \input's the same child file inside its
+% own figure environment.
+
+\documentclass[border=2pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, shapes, decorations.pathreplacing}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+  \begin{tikzpicture}[x=1cm, y=1cm]
+    \input{Fig1_Overview.tikz}
+  \end{tikzpicture}
+\end{document}

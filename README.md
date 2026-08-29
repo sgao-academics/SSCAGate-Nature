@@ -12,9 +12,13 @@ discovery* (Journal of Classification submission).
 - `figures_src/` — the TikZ source of the manuscript's Fig1 (compiled inside the paper).
 - `REPLICATION_INDEX.md` — the figure/table -> source -> data mapping.
 
-**Quick start:** `pip install -r requirements.txt`, then run
-`scripts/fig_generators/gen_Fig2_ClusterDecomposition.py` and
-`gen_Fig3_EdgeCountPitfall.py` (Fig1 is the manuscript's TikZ schematic; see
-`REPLICATION_INDEX.md`). Optionally run
-`scripts/fig_generators/_verify_fig_numbers.py` to confirm the figure numbers match
-the paper.
+**Quick start:** `pip install -r requirements.txt`, then:
+- Reproduce Fig. 2 and Fig. 3:
+  `python scripts/fig_generators/gen_Fig2_ClusterDecomposition.py`
+  `python scripts/fig_generators/gen_Fig3_EdgeCountPitfall.py`
+- Reproduce Fig. 1 (TikZ schematic): `pdflatex figures_src/Fig1_Overview_standalone.tex`
+- Verify all figure numbers against the paper:
+  `python scripts/fig_generators/_verify_fig_numbers.py`
+
+Every main figure and supplementary table is generated from the bundled result files
+in `data/`, so no external download is required.
